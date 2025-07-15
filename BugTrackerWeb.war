@@ -1,0 +1,1 @@
+# Use official Tomcat image from Docker HubFROM tomcat:9.0# Remove default webappsRUN rm -rf /usr/local/tomcat/webapps/*# Copy your WAR file to the ROOT webapp inside TomcatCOPY BugTrackerWeb.war /usr/local/tomcat/webapps/ROOT.war# Expose Tomcat port 8080EXPOSE 8080# Start Tomcat serverCMD ["catalina.sh", "run"]
